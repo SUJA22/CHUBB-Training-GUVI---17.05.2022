@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-center">
+  <div class="card mt-2" style="width: 20rem">
+    <img
+      class="card-img-top"
+      src="../../assets/usericon.png"
+      alt="user"
+      width="100"
+      height="200"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ userdata.name }}</h5>
+      <p class="card-text"><B>ID:</B> {{ userdata.id }}</p>
+      <p class="card-text"><b>AVATAR:</b> {{ userdata.avatar }}</p>
+      <p class="card-text"><b>CREATED AT:</b> {{ userdata.createdAt }}</p>
+      <div class="d-flex justify-content-between flex-row">
+        <a
+          class="btn btn-primary ms-auto mr-4"
+          [routerLink]="['/edit-form', userdata.id]"
+          >Edit</a
+        >
+        <a class="btn btn-primary me-auto" [routerLink]="['/user-table']"
+          >Back</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

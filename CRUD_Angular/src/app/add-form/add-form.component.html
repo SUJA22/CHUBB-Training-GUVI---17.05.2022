@@ -1,0 +1,36 @@
+<form [formGroup]="userForm" (ngSubmit)="postUser()">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="name"
+        placeholder="Enter Name"
+      />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Avatar</label>
+    <input
+      type="text"
+      class="form-control"
+      formControlName="avatar"
+      placeholder="Enter Avatar"
+    />
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Created At</label>
+    <input
+      type="datetime"
+      class="form-control"
+      formControlName="createdAt"
+      placeholder="Enter Date of Creation"
+    />
+  </div>
+
+  <div class="d-flex flex-row justify-content-start">
+    <button type="submit" class="btn btn-primary mr-2">ADD</button>
+    <button type="reset" class="btn btn-secondary">CLEAR</button>
+  </div>
+</form>

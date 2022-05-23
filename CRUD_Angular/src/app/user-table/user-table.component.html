@@ -1,0 +1,40 @@
+<div class="w-100 d-flex dlex-column justify-content-center">
+  <div id="table_container">
+    <table class="table table-striped">
+      <thead >
+        <tr>
+          <th scope="col" class="text-center">#</th>
+          <th scope="col" class="text-center">Name</th>
+          <th scope="col" class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let userdata of userlist" class="text-center">
+          <th class="text-center">{{ userdata.id }}</th>
+          <td class="text-center">{{ userdata.name }}</td>
+          <td class="d-flex flex-row justify-content-center" id="buttons">
+            <button
+              class="btn btn-info mr-2"
+              [routerLink]="['/user-view', userdata.id]"
+            >
+              <i class="bi bi-info-circle"></i>
+            </button>
+            <button
+              class="btn btn-primary mr-2"
+              [routerLink]="['/edit-form', userdata.id]"
+            >
+              <i class="bi bi-pen-fill"></i>
+            </button>
+            <button
+              class="btn btn-danger"
+              type="submit"
+              (click)="deleteUser(userdata.id)"
+            >
+              <i class="bi bi-trash-fill"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

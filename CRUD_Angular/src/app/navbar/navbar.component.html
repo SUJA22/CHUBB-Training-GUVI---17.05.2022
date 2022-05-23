@@ -1,0 +1,42 @@
+<nav class="navbar navbar-light navbar-expand-lg bg-primary">
+  <a class="navbar-brand me" href="#">CRUD</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link mr-sm-2" [routerLink]="['/user-table']"
+          ><strong>VIEW USERS </strong><span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link mr-sm-2" [routerLink]="['/add-form']"
+          ><strong>ADD USER</strong><span class="sr-only">(current)</span></a
+        >
+      </li>
+    </ul>
+
+    <!-- <form class="form-inline my-2 my-lg-0 me-auto" (ngSubmit)="searchUser()">
+        <input
+        id="searchInput"
+          class="form-control mr-sm-2 "
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+          [(ngModel)]="searchText"
+        />
+        <button class="btn btn-success my-2 my-sm-0 " type="submit">
+          Search
+        </button>
+      </form>-->
+  </div>
+</nav>
